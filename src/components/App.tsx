@@ -47,6 +47,7 @@ export const App = () => {
             current_price: number;
             symbol: string;
             market_cap: number;
+            price_change_percentage_24h: number;
           }) => (
             <Coin
               key={coin.id}
@@ -55,6 +56,7 @@ export const App = () => {
               price={coin.current_price}
               symbol={coin.symbol}
               volume={coin.market_cap}
+              priceChange={coin.price_change_percentage_24h}
             />
           )
         )}

@@ -4,6 +4,7 @@ interface Props {
   symbol: string;
   price: number;
   volume: number;
+  priceChange: number;
 }
 
 export const Coin: React.FC<Props> = ({
@@ -12,6 +13,7 @@ export const Coin: React.FC<Props> = ({
   symbol,
   price,
   volume,
+  priceChange,
 }) => {
   return (
     <>
@@ -24,6 +26,11 @@ export const Coin: React.FC<Props> = ({
         <div className="coin__data">
           <div className="coin__price">{price}</div>
           <div className="coin__volume">{volume}</div>
+          {priceChange < 0 ? (
+            <div className="coin__change--down">{priceChange.toFixed(2)}%</div>
+          ) : (
+            <div className="coin__change--up">{priceChange.toFixed(2)}%</div>
+          )}
         </div>
       </div>
     </>
