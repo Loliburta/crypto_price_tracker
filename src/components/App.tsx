@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Coin } from "./Coin/Coin";
 import "./App.scss";
-// https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
 export const App = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -13,7 +12,7 @@ export const App = () => {
         );
         const r = await res.json();
         console.log(r);
-        setCoins(r)
+        setCoins(r);
       } catch (err) {
         console.log(err);
       }
