@@ -5,6 +5,7 @@ interface Props {
   price: number;
   volume: number;
   priceChange: number;
+  marketCap: number;
 }
 
 export const Coin: React.FC<Props> = ({
@@ -14,6 +15,7 @@ export const Coin: React.FC<Props> = ({
   price,
   volume,
   priceChange,
+  marketCap
 }) => {
   return (
     <>
@@ -31,6 +33,7 @@ export const Coin: React.FC<Props> = ({
           ) : (
             <div className="coin__change--up">{priceChange.toFixed(2)}%</div>
           )}
+          <div className="coin__marketcap">Market Cap: $</div>
         </div>
       </div>
     </>

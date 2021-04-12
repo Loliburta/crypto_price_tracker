@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Coin } from "./Coin/Coin";
 import "./App.scss";
+import { NumberLiteralType } from "typescript";
 export const App = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -48,6 +49,7 @@ export const App = () => {
             symbol: string;
             market_cap: number;
             price_change_percentage_24h: number;
+            total_volume: number;
           }) => (
             <Coin
               key={coin.id}
@@ -55,8 +57,9 @@ export const App = () => {
               image={coin.image}
               price={coin.current_price}
               symbol={coin.symbol}
-              volume={coin.market_cap}
+              marketCap={coin.market_cap}
               priceChange={coin.price_change_percentage_24h}
+              volume={coin.total_volume}
             />
           )
         )}
