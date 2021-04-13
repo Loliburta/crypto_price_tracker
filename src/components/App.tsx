@@ -40,31 +40,43 @@ export const App = () => {
           onChange={handleChange}
         />
       </div>
-      <div>
-        {filteredCoins.map(
-          (coin: {
-            id: string;
-            name: string;
-            image: string;
-            current_price: number;
-            symbol: string;
-            market_cap: number;
-            price_change_percentage_24h: number;
-            total_volume: number;
-          }) => (
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              image={coin.image}
-              price={coin.current_price}
-              symbol={coin.symbol}
-              marketCap={coin.market_cap}
-              priceChange={coin.price_change_percentage_24h}
-              volume={coin.total_volume}
-            />
-          )
-        )}
-      </div>
+
+      <table className="coin">
+        <thead>
+          <tr>
+            <th className="table__name">Name</th>
+            <th>Price</th>
+            <th>24h %</th>
+            <th>Market Cap</th>
+            <th>Volume(24h)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredCoins.map(
+            (coin: {
+              id: string;
+              name: string;
+              image: string;
+              current_price: number;
+              symbol: string;
+              market_cap: number;
+              price_change_percentage_24h: number;
+              total_volume: number;
+            }) => (
+              <Coin
+                key={coin.id}
+                name={coin.name}
+                image={coin.image}
+                price={coin.current_price}
+                symbol={coin.symbol}
+                marketCap={coin.market_cap}
+                priceChange={coin.price_change_percentage_24h}
+                volume={coin.total_volume}
+              />
+            )
+          )}
+        </tbody>
+      </table>
     </>
   );
 };
