@@ -1,0 +1,25 @@
+.coin__row {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+}
+.coin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+}
+.coin__image {
+  width: 45px;
+  height: 45px;
+}
+.coin__name {
+  margin: 0px 6px;
+  font-weight: bold;
+}
+.coin__change--down {
+  color: red;
+}
+.coin__change--up {
+  color: green;
+}

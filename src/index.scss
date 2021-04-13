@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 @import "./components/App.scss";
+@import "./components/Coin/Coin.scss";
 
 * {
   box-sizing: border-box;
@@ -11,4 +14,14 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #17171a;
+  color: white;
+}
+#root {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+    rgb(34, 37, 49) 0%,
+    rgba(34, 37, 49, 0) 413px
+  );
 }

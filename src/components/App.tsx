@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Icon } from "@iconify/react";
+import magnifyingGlass from "@iconify-icons/radix-icons/magnifying-glass";
 import { Coin } from "./Coin/Coin";
 import "./App.scss";
 import { NumberLiteralType } from "typescript";
@@ -28,16 +30,15 @@ export const App = () => {
   };
   return (
     <>
+      <div className="searchbar__text">Search a currency</div>
       <div className="searchbar">
-        <h1 className="searchbar__text">Search a currency</h1>
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-            className="searchbar__input"
-            onChange={handleChange}
-          />
-        </form>
+        <Icon className="searchbar__icon" icon={magnifyingGlass} />
+        <input
+          type="text"
+          placeholder="Search"
+          className="searchbar__input"
+          onChange={handleChange}
+        />
       </div>
       <div>
         {filteredCoins.map(
