@@ -1,36 +1,30 @@
 import { useState, useEffect } from "react";
+// Components
+import { Coin } from "./Coin/Coin";
+// Utils
+import { apiCall } from "../utils/apiCall";
+// Icons
 import { Icon } from "@iconify/react";
 import magnifyingGlass from "@iconify-icons/radix-icons/magnifying-glass";
-import { Coin } from "./Coin/Coin";
+// SCSS
 import "./App.scss";
-import { NumberLiteralType } from "typescript";
+
 export const App = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
-  useEffect(() => {
-    const apiCall = async () => {
-      try {
-        const res = await fetch(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-        );
-        const r = await res.json();
-        console.log(r);
-        setCoins(r);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    apiCall();
-  }, []);
   const filteredCoins = coins.filter((coin: { name: string }) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
   const handleChange = (e: React.ChangeEvent<any>) => {
     setSearch(e.target.value);
   };
+  useEffect(() => {
+    apiCall(setCoins);
+  }, []);
+
   return (
     <>
-      <div className="searchbar__text">Search a currency</div>
+      <div className="headline">Coinmarketcrap</div>
       <div className="searchbar">
         <Icon className="searchbar__icon" icon={magnifyingGlass} />
         <input
