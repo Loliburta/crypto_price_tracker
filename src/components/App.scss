@@ -31,17 +31,27 @@
 }
 .searchbar__icon {
   font-size: 25px;
-  margin-top: 2px;
   left: 10px;
+  margin-top: 7.5px;
   color: black;
   display: flex;
   position: absolute;
+  cursor: text;
 }
-.coin {
+.table__wrapper {
+  overflow-x: auto;
+}
+.table {
   width: 100%;
   text-align: right;
   max-width: 1500px;
   margin: 0 auto;
+  border-collapse: collapse;
+}
+.table__th {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(59, 54, 54);
+  border-top: 1px solid rgb(59, 54, 54);
 }
 .table__name {
   text-align: left;

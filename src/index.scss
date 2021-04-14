@@ -1,14 +1,11 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap");
 // Other SCSS
 @import "./components/App.scss";
 @import "./components/Coin/Coin.scss";
 
 * {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-
 }
 
 html,
@@ -20,6 +17,8 @@ body,
   padding: 0;
   background-color: #17171a;
   color: white;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 #root {
   background-repeat: no-repeat;
@@ -28,4 +27,38 @@ body,
     rgb(34, 37, 49) 0%,
     rgba(34, 37, 49, 0) 413px
   );
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #382929;
+  border: 0px none #ffffff;
+  border-radius: 65px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #382929;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #382929;
+}
+::-webkit-scrollbar-track {
+  background: #554141;
+  border: 0px none #ffffff;
+  border-radius: 21px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #554141;
+}
+::-webkit-scrollbar-track:active {
+  background: #554141;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

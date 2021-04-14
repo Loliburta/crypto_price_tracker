@@ -20,17 +20,17 @@ export const Coin: React.FC<Props> = ({
   return (
     <>
       <tr>
-        <td>
+        <td className="coin__td">
           <div className="coin__main">
             <img className="coin__main__image" src={image} alt="altcoin icon" />
             <div className="coin__main__name">{name}</div>
             <p className="coin__main__symbol">{symbol.toUpperCase()}</p>
           </div>
         </td>
-        <td>
+        <td className="coin__td">
           <div className="coin__data__price">${price}</div>
         </td>
-        <td>
+        <td className="coin__td">
           {priceChange < 0 ? (
             <div className="coin__data__change--down">
               {priceChange.toFixed(2)}%
@@ -41,11 +41,13 @@ export const Coin: React.FC<Props> = ({
             </div>
           )}
         </td>
-        <td>
-          <div className="coin__data__marketcap">${marketCap}</div>
+        <td className="coin__td">
+          <div className="coin__data__marketcap">
+            ${marketCap.toLocaleString()}
+          </div>
         </td>
-        <td>
-          <div className="coin__data__volume">${volume}</div>
+        <td className="coin__td">
+          <div className="coin__data__volume">${volume.toLocaleString()}</div>
         </td>
       </tr>
     </>
