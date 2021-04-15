@@ -33,7 +33,7 @@ export const Coin: React.FC<Props> = ({
           <div className="coin__main">
             <img className="coin__main__image" src={image} alt="altcoin icon" />
             <div className="coin__main__name">{name}</div>
-            <p className="coin__main__symbol">{symbol.toUpperCase()}</p>
+            <p className="coin__main__symbol">{symbol?.toUpperCase()}</p>
           </div>
         </td>
         <td className="coin__td">
@@ -42,33 +42,33 @@ export const Coin: React.FC<Props> = ({
         <td className="coin__td">
           {priceChange1 < 0 ? (
             <div className="coin__data__change--down">
-              {priceChange1.toFixed(2)}%
+              {priceChange1?.toFixed(2)}%
             </div>
           ) : (
             <div className="coin__data__change--up">
-              +{priceChange1.toFixed(2)}%
+              +{priceChange1?.toFixed(2)}%
             </div>
           )}
         </td>
         <td className="coin__td">
           {priceChange24 < 0 ? (
             <div className="coin__data__change--down">
-              {priceChange24.toFixed(2)}%
+              {priceChange24?.toFixed(2)}%
             </div>
           ) : (
             <div className="coin__data__change--up">
-              +{priceChange24.toFixed(2)}%
+              +{priceChange24?.toFixed(2)}%
             </div>
           )}
         </td>
         <td className="coin__td">
           {priceChange7d < 0 ? (
             <div className="coin__data__change--down">
-              {priceChange7d.toFixed(2)}%
+              {priceChange7d?.toFixed(2)}%
             </div>
           ) : (
             <div className="coin__data__change--up">
-              +{priceChange7d.toFixed(2)}%
+              +{priceChange7d?.toFixed(2)}%
             </div>
           )}
         </td>

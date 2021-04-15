@@ -6,8 +6,7 @@ import { apiCall } from "../utils/apiCall";
 // Icons
 import { Icon } from "@iconify/react";
 import magnifyingGlass from "@iconify-icons/radix-icons/magnifying-glass";
-// SCSS
-import "./App.scss";
+import Next from "@iconify-icons/ic/outline-navigate-next";
 
 interface Props {
   id: string;
@@ -34,7 +33,7 @@ export const App = () => {
   };
   useEffect(() => {
     apiCall(setCoins, counter);
-  }, []);
+  }, [counter]);
 
   return (
     <>
@@ -51,7 +50,16 @@ export const App = () => {
           onChange={handleChange}
         />
       </div>
-
+      <div className="page__wrapper">
+        <div className="page">
+          <div className={counter === 1 ? "mark--disabled" : "mark"} onClick={() => setCounter(counter - 1)}>
+            <Icon flip="horizontal" icon={Next} />
+          </div>
+          <div className="mark" onClick={() => setCounter(counter + 1)}>
+            <Icon icon={Next} />
+          </div>
+        </div>
+      </div>
       <div className="table__wrapper">
         <table className="table">
           <thead>

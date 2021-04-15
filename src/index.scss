@@ -1,8 +1,8 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap");
 // Other SCSS
-@import "./components/App.scss";
-@import "./components/Coin/Coin.scss";
+@import "./components/App";
+@import "./components/Coin/Coin";
 
 * {
   box-sizing: border-box;
