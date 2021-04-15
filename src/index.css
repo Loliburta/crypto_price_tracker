@@ -87,7 +87,7 @@
 }
 
 .mark {
-  border: 1px solid #5f5959;
+  border: 1px solid #5a5050;
   font-size: 35px;
   cursor: pointer;
   padding: 3px 6px 0px 6px;
@@ -95,7 +95,7 @@
 }
 
 .mark--disabled {
-  border: 1px solid #5f5959;
+  border: 1px solid #5a5050;
   font-size: 35px;
   padding: 3px 6px 0px 6px;
   pointer-events: none;
