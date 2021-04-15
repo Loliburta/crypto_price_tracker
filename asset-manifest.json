@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/crypto_price_tracker/static/css/main.61575531.chunk.css",
-    "main.js": "/crypto_price_tracker/static/js/main.ddef975b.chunk.js",
-    "main.js.map": "/crypto_price_tracker/static/js/main.ddef975b.chunk.js.map",
+    "main.css": "/crypto_price_tracker/static/css/main.1530c045.chunk.css",
+    "main.js": "/crypto_price_tracker/static/js/main.026efa3c.chunk.js",
+    "main.js.map": "/crypto_price_tracker/static/js/main.026efa3c.chunk.js.map",
     "runtime-main.js": "/crypto_price_tracker/static/js/runtime-main.372c457d.js",
     "runtime-main.js.map": "/crypto_price_tracker/static/js/runtime-main.372c457d.js.map",
-    "static/js/2.f0c9bf41.chunk.js": "/crypto_price_tracker/static/js/2.f0c9bf41.chunk.js",
-    "static/js/2.f0c9bf41.chunk.js.map": "/crypto_price_tracker/static/js/2.f0c9bf41.chunk.js.map",
+    "static/js/2.e9c34875.chunk.js": "/crypto_price_tracker/static/js/2.e9c34875.chunk.js",
+    "static/js/2.e9c34875.chunk.js.map": "/crypto_price_tracker/static/js/2.e9c34875.chunk.js.map",
     "index.html": "/crypto_price_tracker/index.html",
-    "static/css/main.61575531.chunk.css.map": "/crypto_price_tracker/static/css/main.61575531.chunk.css.map",
-    "static/js/2.f0c9bf41.chunk.js.LICENSE.txt": "/crypto_price_tracker/static/js/2.f0c9bf41.chunk.js.LICENSE.txt"
+    "static/css/main.1530c045.chunk.css.map": "/crypto_price_tracker/static/css/main.1530c045.chunk.css.map",
+    "static/js/2.e9c34875.chunk.js.LICENSE.txt": "/crypto_price_tracker/static/js/2.e9c34875.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.372c457d.js",
-    "static/js/2.f0c9bf41.chunk.js",
-    "static/css/main.61575531.chunk.css",
-    "static/js/main.ddef975b.chunk.js"
+    "static/js/2.e9c34875.chunk.js",
+    "static/css/main.1530c045.chunk.css",
+    "static/js/main.026efa3c.chunk.js"
   ]
 }
