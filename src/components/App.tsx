@@ -52,7 +52,10 @@ export const App = () => {
       </div>
       <div className="page__wrapper">
         <div className="page">
-          <div className={counter === 1 ? "mark--disabled" : "mark"} onClick={() => setCounter(counter - 1)}>
+          <div
+            className={counter === 1 ? "mark--disabled" : "mark"}
+            onClick={() => setCounter(counter - 1)}
+          >
             <Icon flip="horizontal" icon={Next} />
           </div>
           <div className="mark" onClick={() => setCounter(counter + 1)}>
@@ -66,12 +69,12 @@ export const App = () => {
             <tr>
               <th className="table__rank table__th">#</th>
               <th className="table__name table__th">Name</th>
-              <th className="table__th">Price</th>
+              <th className="table__price table__th">Price</th>
               <th className="table__th">1h %</th>
               <th className="table__th">24h %</th>
               <th className="table__th">7d %</th>
-              <th className="table__th">Market Cap</th>
-              <th className="table__th">Volume(24h)</th>
+              <th className="table__marketcap table__th">Market Cap</th>
+              <th className="table__volume table__th">Volume(24h)</th>
             </tr>
           </thead>
           <tbody>

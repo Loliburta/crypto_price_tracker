@@ -1,5 +1,5 @@
 .headline {
-  font-size: 40px;
+  font-size: clamp(2.1rem, 5vw, 3rem);
   margin: auto;
   display: flex;
   text-align: center;
@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 500px;
+  width: clamp(15rem, 50vw, 33rem);
   justify-content: center;
   margin: auto;
   margin-bottom: 10px;
@@ -61,12 +61,14 @@
   border-radius: 2px;
 }
 .mark--disabled {
+  color: gray;
   border: 1px solid rgb(90, 80, 80);
   font-size: 35px;
   padding: 3px 6px 0px 6px;
   pointer-events: none;
   border-radius: 2px;
 }
+
 
 .table__wrapper {
   overflow-x: auto;
@@ -79,12 +81,24 @@
   border-collapse: collapse;
 }
 .table__th {
-  padding: 15px 0;
+  padding: 15px 0px;
   border-bottom: 1px solid rgb(59, 54, 54);
   border-top: 1px solid rgb(59, 54, 54);
 }
-
+.table__rank {
+  padding-left: 5px;
+}
+.table__name {
+  width: 230px;
+}
+.table__price,
+.table__marketcap {
+  padding-right: 20px;
+}
 .table__name,
 .table__rank {
   text-align: left;
+}
+.table__volume {
+  padding-right: 5px;
 }
